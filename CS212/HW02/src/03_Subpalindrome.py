@@ -131,5 +131,3 @@ text = RecString('123454311123454321010')
 print longest_subpalindrome_slice(text)
 print text.get_recording_link()
 
-# JoRoPi pruebas
-# Editando desde la web
