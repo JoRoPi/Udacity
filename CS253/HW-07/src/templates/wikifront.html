@@ -1,0 +1,16 @@
+{% extends "wikibase.html" %}
+
+{% block title %}Front wiki page{% endblock %}
+
+{% block main_body %}
+	{% if pageNotExistError %}
+<div class="error-pageNotExist">
+	Sorry, this page doesn't exist, <a class="top-main-options-link" href="/login">login</a> to create it.
+</div>
+	{% else %}
+<div class="wiki-content">
+	{{ wikiPageContent | safe }}
+</div>
+	{% endif %}
+{% endblock %}
+

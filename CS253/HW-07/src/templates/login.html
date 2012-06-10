@@ -1,0 +1,27 @@
+{% extends "loginbase.html" %}
+
+{% block title %}Login wiki page{% endblock %}
+
+{% block main_body %}
+<h1 class="h1-title">Login</h1>
+<div>
+	<form class="login-signup" method="post">
+		<p>
+			<label for="name">Username</label>
+			<input name="username" id="username" type="text" value="{{ username }}">
+		</p>
+		<p>
+			<label for="password">Password</label>
+			<input name="password" id="password" type="password" value="">
+		</p>
+	{% if login_error_msg %}
+		<p>
+			<span class="error_msg">{{ login_error_msg }}</span>
+		</p>
+	{% endif %}
+		<p>
+			<input type="submit" value="Submit">
+		</p>
+	</form>
+</div>
+{% endblock %}

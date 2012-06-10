@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block top_main_options %}
+<div class="top-main-options">
+	<span class="top-main-options-gr0">
+	{% if editLink %}
+		<a class="top-main-options-link" href="{{ editLinkUrl }}">edit</a>
+	{% endif %}
+	{% if editLink and viewLink %}
+		|
+	{% endif %}
+	{% if viewLink %}
+		<a class="top-main-options-link" href="{{ viewLinkUrl }}">view</a>
+	{% endif %}
+	{% if (editLink or viewLink) and historyLink %}
+		|
+	{% endif %}
+	{% if historyLink %}
+		<a class="top-main-options-link" href="{{ historyLinkUrl }}">history</a>
+	{% endif %}
+	</span>
+	<span class="top-main-options-gr1">
+	{% if logoutLink %}
+		{{ userName }} (<a class="top-main-options-link" href="/logout">logout</a>)
+	{% else %}
+		{% if loginLink %}
+			<a class="top-main-options-link" href="/login">login</a>
+		{% endif %}
+		{% if loginLink and signupLink %}
+			|
+		{% endif %}
+		{% if signupLink %}
+			<a class="top-main-options-link" href="/signup">signup</a>
+		{% endif %}
+	{% endif %}
+	</span>
+</div>
+{% endblock %}

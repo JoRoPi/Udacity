@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Front page{% endblock %}
+
+{% block body %}
+		<div class="blogpost-list">
+		{% for blogpost in blogposts %}
+			<div class="blogpost-item-list">
+				<div class="blogpost-head-item-list">&nbsp;
+					<div class="blogpost-subject-item-list">{{blogpost.subject}}</div>
+					<div class="blogpost-created-item-list">{{blogpost.created.strftime('%h %d, %Y')}}</div>
+				</div>
+				<div class="blogpost-content-item-list">{{blogpost.content_ajust_render() | safe}}</div>
+				<br>
+				<br>
+			</div>
+		{% endfor %}
+		</div>
+{% endblock %}

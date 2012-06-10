@@ -1,0 +1,19 @@
+{% extends "wikibase.html" %}
+
+{% block title %}Front wiki page{% endblock %}
+
+{% block main_body %}
+	<div class="history-list">
+	{% for wikiPage in wikiPages %}
+		<p>
+			{{ wikiPage.created.strftime('%c') }}
+			{{ wikiPage.wikiContent[:100] }}
+			<a href="{{ wikiPage.wikiUrl }}?v={{ wikiPage.version }}">view</a>
+		{% if editLink %}
+			<a href="{{ editLinkUrl }}">edit</a>
+		{% endif %}
+		</p>
+	{% endfor %}
+	</div>
+{% endblock %}
+

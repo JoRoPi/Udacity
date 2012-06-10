@@ -1,0 +1,97 @@
+body {
+	position: relative;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	
+	margin-left: 8%;
+	margin-right: 8%;
+	padding: 10px;
+	color: #333;
+}
+
+.top-main-options {
+	text-align: right;
+	font-size: 13px;
+	color: gray;
+}
+
+.top-main-options-gr0 {
+	padding-right: 4%;}
+
+.top-main-options-gr1 {
+}
+
+.top-main-options-link {
+	color: gray;
+	text-decoration: none;
+}
+
+.top-main-options-link:visited {
+	color: gray;
+}
+
+.top-main-options-link:hover {
+	text-decoration: underline;
+}
+
+.wiki-content {
+	padding-top: 50px;
+}
+
+.error-pageNotExist {
+	padding-top: 50px;
+	color: red;
+	text-align: center;
+}
+
+.h1-title {
+	margin-bottom: 5px;
+}
+
+form.login-signup {
+	padding-top: 22px;
+	border-top: 1px solid #d7d7d7;
+}
+
+	form.login-signup p {
+		display: table;
+		margin-bottom: 22px;
+		padding: 0px;
+		white-space: nowrap;
+	}
+
+		form.login-signup label {
+			display: table-cell;
+			width: 120px;
+			padding-right: 15px;
+			text-align: right;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+	
+		form.login-signup input[type="text"], form.login-signup input[type="password"], form.login-signup input[type="email"] {
+			display: table-cell;
+			width: 300px;
+			height: 20px;
+			border: 1px solid #d7d7d7;
+		}
+
+		form.login-signup span.error_msg  {
+			display: table-cell;
+			width: 300px;
+			padding-left: 20px;
+			text-align: left;
+			font-weight: bold;
+			vertical-align: middle;
+			color: red;
+		}
+		
+form.wikiedit {
+}
+	form.wikiedit textarea {
+		display: table-cell;
+		width: 100%;
+		height: 400px;
+		border: 1px solid #d7d7d7;
+	}
+

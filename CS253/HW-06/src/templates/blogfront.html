@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Front page{% endblock %}
+
+{% block top %}
+		<div class="blogfront-links">
+			<a class="top-links" href="{{top_link_login}}">login</a> | <a class="top-links" href="{{top_link_signup}}">signup</a>
+		</div>
+{% endblock %}
+
+{% block body %}
+		<div class="blogpost-list">
+		{% for blogpost in blogposts %}
+			<div class="blogpost-item-list">
+				<div class="blogpost-head-item-list">&nbsp;
+					<div class="blogpost-subject-item-list">
+						<a class="blogpost-link-item-list" href="{{home_page}}/{{blogpost.key().id()}}">{{blogpost.subject}}</a>
+					</div>
+					<div class="blogpost-created-item-list">{{blogpost.created.strftime('%h %d, %Y')}}</div>
+				</div>
+				<div class="blogpost-content-item-list">{{blogpost.content_ajust_render() | safe}}</div>
+				<br>
+				<br>
+			</div>
+		{% endfor %}
+		</div>
+		<div class="cache-time">
+			Queried {{seconds_ago}} seconds ago
+		</div>
+{% endblock %}

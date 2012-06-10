@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Udacity - CS253 - HW4 Basic Blog - Signup page</title>
+<link rel="stylesheet" href="/stylesheets/signup.css" type="text/css"
+	media="screen">
+</head>
+<body>
+	<header>
+		<h1>Signup</h1>
+	</header>
+	<nav>
+		<!-- Navigation -->
+	</nav>
+	<section id="intro">
+		<!-- Introduction -->
+	</section>
+	<div id="content">
+		<div id="mainConten">
+			<section>
+				<!-- Main content area -->
+				<form method="post">
+					<p>
+						<label for="name">Username</label>
+						<input name="username" id="username" type="text" value="{{username}}">
+						<span class="error_msg">{{username_msg}}</span>
+					</p>
+					<p>
+						<label for="password">Password</label>
+						<input name="password" id="password" type="password" value="">
+						<span class="error_msg">{{password_msg}}</span>
+					</p>
+					<p>
+						<label for="verify">Verify Password</label>
+						<input name="verify" id="verify" type="password" value="">
+						<span class="error_msg">{{verify_msg}}</span>
+					</p>
+					<p>
+						<label for="email">Email (optional)</label>
+						<input name="email" id="email" type="text" value="{{email}}">
+						<span class="error_msg">{{email_msg}}</span>
+					</p>
+					<p>
+						<input type="submit" value="Submit">
+					</p>
+				</form>
+			</section>
+		</div>
+		<aside>
+			<!-- Sidebar -->
+		</aside>
+	</div>
+	<footer>
+		<!-- Footer -->
+	</footer>
+
+</body>
+</html>
